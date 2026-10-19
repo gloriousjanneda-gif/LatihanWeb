@@ -1,0 +1,250 @@
+/* =========================================
+   RESET CSS
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================================
+   BODY
+========================================= */
+body {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================================
+   CONTAINER UTAMA
+========================================= */
+.layout-container {
+    width: 650px;
+    border: 1.5px solid #d89b5c;
+    background-color: #ffffff;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+.badge-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1.5px solid #444444;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header {
+    background-color: #fce4cb;
+    border-bottom: 1.5px solid #d89b5c;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border: 1.5px solid #333333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+.hero {
+    background-color: #dce7f9;
+    border-bottom: 1.5px solid #d89b5c;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #333333;
+}
+
+/* =========================================
+   SERVICES
+========================================= */
+.section-services {
+    background-color: #fef4d2;
+    border-bottom: 1.5px solid #d89b5c;
+    padding: 30px 40px 45px 40px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-col {
+    flex: 1;
+}
+
+.service-col h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.service-col p {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.4;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+.section-about {
+    background-color: #e3d7ea;
+    border-bottom: 1.5px solid #d89b5c;
+    padding: 30px 40px 40px 40px;
+}
+
+.about-intro {
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-col {
+    flex: 1;
+}
+
+.about-col h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.about-col p {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.4;
+}
+
+/* =========================================
+   PERFORMANCE & WAVE SVG
+========================================= */
+.performance-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.performance-svg {
+    width: 100%;
+    height: auto;
+    max-width: 170px;
+    margin-top: 5px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+.section-contact {
+    background-color: #d8ead2;
+    border-bottom: 1.5px solid #d89b5c;
+    padding: 30px 40px 30px 40px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.form-row-double {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    flex: 1;
+    height: 36px;
+    border: 1.5px solid #333333;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.form-row-single {
+    margin-bottom: 15px;
+}
+
+.textarea-field {
+    width: 100%;
+    height: 75px;
+    border: 1.5px solid #333333;
+    border-radius: 12px;
+    background-color: #ffffff;
+    resize: none;
+}
+
+.form-row-btn {
+    text-align: left;
+}
+
+.btn-kirim {
+    background-color: #0056ff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+    background-color: #fce4cb;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #333333;
+}
