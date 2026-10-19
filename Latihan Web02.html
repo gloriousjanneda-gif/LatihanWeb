@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Web02 - Form Klasik</title>
+
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #ffffff;
+      padding: 30px;
+
+      /* Scrollbar halaman luar */
+      min-height: 1200px;
+      overflow-y: scroll;
+    }
+
+    /* Container Luar dengan Scrollbar Klasik */
+    .outer-container {
+      width: 420px;
+      height: 250px;
+      overflow-y: scroll;
+      background-color: #ffffff;
+      border: 2px solid #7f7f7f;
+      padding: 15px 10px;
+      box-sizing: border-box;
+    }
+
+    /* Styling Custom Scrollbar Bergaya Retro (Windows 95) */
+    .outer-container::-webkit-scrollbar,
+    textarea::-webkit-scrollbar {
+      width: 16px;
+      background-color: #e0e0e0;
+    }
+
+    .outer-container::-webkit-scrollbar-track,
+    textarea::-webkit-scrollbar-track {
+      background-color: #e0e0e0;
+      border-left: 1px solid #adadad;
+    }
+
+    .outer-container::-webkit-scrollbar-thumb,
+    textarea::-webkit-scrollbar-thumb {
+      background-color: #c0c0c0;
+      border-top: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      border-right: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+    }
+
+    .outer-container::-webkit-scrollbar-button,
+    textarea::-webkit-scrollbar-button {
+      background-color: #c0c0c0;
+      border-top: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+      border-right: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+      height: 16px;
+    }
+
+    /* Arrow button scrollbar atas */
+    .outer-container::-webkit-scrollbar-button:single-button:vertical:decrement,
+    textarea::-webkit-scrollbar-button:single-button:vertical:decrement {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><polygon points="4,1 1,6 7,6" fill="black"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* Arrow button scrollbar bawah */
+    .outer-container::-webkit-scrollbar-button:single-button:vertical:increment,
+    textarea::-webkit-scrollbar-button:single-button:vertical:increment {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8"><polygon points="4,6 1,1 7,1" fill="black"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* Tata Letak Form Menggunakan Tabel */
+    .form-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .form-table td {
+      padding: 4px 6px;
+      vertical-align: top;
+    }
+
+    /* Label standar */
+    .label-col {
+      text-align: right;
+      width: 10px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    /* =========================================
+       NAME DAN EMAIL
+       ========================================= */
+
+    .name-label,
+    .email-label {
+      position: relative;
+
+      /* Geser tulisan Name dan Email ke kiri */
+      left: -15px;
+    }
+
+    /* =========================================
+       ADDRESS
+       ========================================= */
+
+    .address-label {
+      position: relative;
+
+      /* Geser tulisan Address ke bawah */
+      top: 35px;
+    }
+
+    /* =========================================
+       POSTCODE
+       ========================================= */
+
+    .postcode-label {
+      position: relative;
+
+      /* Geser tulisan Postcode ke kiri */
+      left: 5px;
+    }
+
+    /* Style Input & Textarea */
+    input[type="text"],
+    textarea {
+      border: 1px solid #7f7f7f;
+      padding: 2px 4px;
+      box-sizing: border-box;
+      font-size: 13px;
+    }
+
+    .input-name,
+    .input-email {
+      width: 220px;
+      font-family: Arial, sans-serif;
+    }
+
+    .input-postcode {
+      width: 110px;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      width: 180px;
+      height: 75px;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+      overflow-y: scroll;
+      resize: none;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Box Luar Ber-scrollbar -->
+  <div class="outer-container">
+
+    <form action="#" method="post">
+
+      <table class="form-table">
+
+        <!-- NAME -->
+        <tr>
+          <td class="label-col name-label">
+            <label for="name">Name:</label>
+          </td>
+
+          <td>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value="you name here"
+              class="input-name">
+          </td>
+        </tr>
+
+        <!-- EMAIL -->
+        <tr>
+          <td class="label-col email-label">
+            <label for="email">Email:</label>
+          </td>
+
+          <td>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value="your email here"
+              class="input-email">
+          </td>
+        </tr>
+
+        <!-- ADDRESS -->
+        <tr>
+          <td class="label-col address-label">
+            <label for="address">Address:</label>
+          </td>
+
+          <td>
+            <textarea
+              id="address"
+              name="address">25 Nowhere Street
+Somewhere
+Not Here
+Y2K 5RU</textarea>
+          </td>
+        </tr>
+
+        <!-- POSTCODE -->
+        <tr>
+          <td class="label-col postcode-label">
+            <label for="postcode">Postcode:</label>
+          </td>
+
+          <td>
+            <input
+              type="text"
+              id="postcode"
+              name="postcode"
+              value="postal code"
+              class="input-postcode">
+          </td>
+        </tr>
+
+      </table>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
